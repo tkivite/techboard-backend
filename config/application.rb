@@ -18,7 +18,7 @@ Bundler.require(*Rails.groups)
 module Techboard
   class Application < Rails::Application
     config.load_defaults 5.2
-    #config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('lib')
     load_path_strategy = Rails.env.production? ? :eager_load_paths : :autoload_paths
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
